@@ -80,43 +80,97 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <div className="mt-10 mb-28 max-w-4xl mx-auto flex flex-col items-center gap-y-6 text-[#482d14]">
-            
-            <h1 className="six-title tracking-tight font-medium text-center">
-                My Websites Make A <span className="underline">Real Impact</span>
-            </h1>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-4">
-
-                <div className="w-full bg-[#34200e] py-6 flex flex-col gap-y-2 items-center text-white rounded-xl shadow-md">
-                    <h1 className="seven-title font-semibold">
-                        2<span className="main-gradient">M+</span>
-                    </h1>
-                    <p className="one-title font-medium">Views (Millions)</p>
-                </div>
-
-                <div className="w-full bg-[#34200e] py-6 flex flex-col gap-y-2 items-center text-white rounded-xl shadow-md">
-                    <h1 className="seven-title font-semibold">
-                        300<span className="main-gradient">k+</span>
-                    </h1>
-                    <p className="one-title font-medium">Visitors (Lifetime)</p>
-                </div>
-
-                <div className="w-full bg-[#34200e] py-6 flex flex-col gap-y-2 items-center text-white rounded-xl shadow-md">
-                    <h1 className="seven-title font-semibold">
-                        <span className="main-gradient">$</span>4000
-                    </h1>
-                    <p className="one-title font-medium">In Total Funding</p>
-                </div>
-
-            </div>
-
-            <p className="text-center italic opacity-80">
-                *This data is a combination of the lifetime analytics across {' '}
-                <div className="block"><b className="underline">all my websites</b> tracked through <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" className="underline font-bold">Google Analytics</a></div>
-            </p>
-
+          <div className="mt-16 mb-28 px-6 text-center font-outfit sm:px-10 lg:px-16">
+            <h2 className="text-black text-2xl font-bold">
+              Manifest Your Dream School
+            </h2>
+            <ul
+              role="list"
+              className="mx-auto mt-10 flex max-w-6xl items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+            >
+              <li>
+                <ul
+                  role="list"
+                  className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12"
+                >
+                  <li className="flex">
+                    <img
+                      alt="Duke"
+                      loading="lazy"
+                      width="799"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/duke.38629773.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                  <li className="flex">
+                    <img
+                      alt="Princeton"
+                      loading="lazy"
+                      width="1367"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/harvard.0651e71d.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                  <li className="flex">
+                    <img
+                      alt="MIT"
+                      loading="lazy"
+                      width="677"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/mit.02abd4ed.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul
+                  role="list"
+                  className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12"
+                >
+                  <li className="flex">
+                    <img
+                      alt="Stanford"
+                      loading="lazy"
+                      width="228"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/yale.fed1fc4e.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                  <li className="flex">
+                    <img
+                      alt="Northwestern"
+                      loading="lazy"
+                      width="1186"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/northwestern.461d14a5.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                  <li className="flex">
+                    <img
+                      alt="UT Austin"
+                      loading="lazy"
+                      width="1225"
+                      height="350"
+                      src="https://maxadmit.com/_next/static/media/utaustin.465217dd.svg"
+                      className="h-9 w-auto object-contain sm:h-11 lg:h-14"
+                      style={{ color: "transparent" }}
+                    />
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
+
         </div>
       </div>
     </>
