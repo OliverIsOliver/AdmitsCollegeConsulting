@@ -18,7 +18,7 @@ export default function AboutMe() {
   return (
     <>
       <div
-        class="relative overflow-hidden bg-orange-400 -skew-y-2 px-4 xl:px-0 pt-16 space-y-24 font-outfit"
+        class="relative overflow-hidden bg-[#98AEEF] -skew-y-2 px-4 xl:px-0 pt-16 space-y-24 font-outfit"
         id="about"
       >
         <div class="relative skew-y-2">
@@ -27,17 +27,17 @@ export default function AboutMe() {
               <div className="pl-0">
                 <div>
                   <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white">
-                    <IoChatboxEllipses className="h-8 w-8 text-[#704421]" />
+                    <IoChatboxEllipses className="h-8 w-8 text-[#122859]" />
                   </span>
                 </div>
 
                 <div class="mt-3">
                   <h2 class="text-4xl mb-1 font-semibold tracking-wide text-white">
                     A Bit{" "}
-                    <span className="text-[#67230d] underline">About Me.</span>
+                    <span className="text-[#1f1d70] underline">About Me.</span>
                   </h2>
-                  <p className="px-4 text-gray-900 border-l-4 border-[#9d4d32] text-xl leading-relaxed text-slate-900 my-4">
-                    <span className="text-[#36190f] font-semibold">
+                  <p className="px-4 text-black border-l-4 border-[#122859] text-xl leading-relaxed my-4">
+                    <span className="text-[#0c1b3b] font-semibold">
                       Hey!
                     </span>{" "}
                     I'm Pranav; I'm an 18-year-old based out of Richmond, Virginia studying
@@ -49,7 +49,7 @@ export default function AboutMe() {
                     <a
                       href="https://talem.org"
                       target="_blank"
-                      className="underline text-[#67230d]"
+                      className="underline text-[#1f1d70]"
                     >
                       talem.org
                     </a>
@@ -57,7 +57,7 @@ export default function AboutMe() {
                     <a
                       href="https://thryvedesign.com"
                       target="_blank"
-                      className="underline text-[#67230d]"
+                      className="underline text-[#1f1d70]"
                     >
                       ThryveDesign
                     </a>
@@ -81,7 +81,7 @@ export default function AboutMe() {
           </div>
 
           <div className="mt-16 mb-28 px-6 text-center font-outfit sm:px-10 lg:px-16">
-            <h2 className="text-black text-2xl font-bold">
+            <h2 className="text-white text-2xl font-bold">
               Manifest Your Dream School
             </h2>
             <ul
