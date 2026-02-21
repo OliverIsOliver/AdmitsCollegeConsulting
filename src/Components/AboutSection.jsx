@@ -68,35 +68,6 @@ export default function AboutMe() {
                     Feel free to reach out at anytime!
                   </p>
 
-                  <div className="flex mt-6 space-x-4 items-center  gap-x-2">
-                    <a
-                      href="https://www.linkedin.com/in/pranav-konjeti/"
-                      target="_blank"
-                      className="contact-buttons-about"
-                    >
-                      <FaLinkedin className="text-2xl" />
-                    </a>
-                    <a
-                      href="https://github.com/PkTheCoda"
-                      target="_blank"
-                      className="contact-buttons-about"
-                    >
-                      <FaGithub className="text-2xl" />
-                    </a>
-                    <a
-                      href="mailto:pranavkonjeti@gmail.com"
-                      className="contact-buttons-about"
-                    >
-                      <IoMailOpen className="text-2xl" />
-                    </a>
-                    <a
-                      href="https://thryvedesign.com"
-                      target="_blank"
-                      className="contact-buttons-about"
-                    >
-                      <MdOutlineBusinessCenter className="text-2xl" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
