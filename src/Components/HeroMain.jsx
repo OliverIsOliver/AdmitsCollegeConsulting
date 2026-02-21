@@ -20,17 +20,6 @@ export default function HeroMain() {
           </div>
           <div className="mx-auto max-w-5xl pb-32 sm:pb-48 lg:pb-56 lg:pt-16 sm:pt-8">
             <div className="text-center">
-            <div className="hidden sm:flex sm:justify-center mb-2">
-              <div className="rounded-full font-outfit px-3 py-1 text-sm transition transform hover:scale-[1.05] duration-300 leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 select-none cursor-text">
-                Don't feel like scrolling?{' '}
-                <a
-                  href="https://me.pranavkonjeti.com"
-                  className="font-semibold text-orange-600">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  See a brief version of my portfolio instead <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </div>
               <h1 className="text-5xl tracking-tight font-semibold text-black sm:text-9xl font-outfit">
                 Hi There, I'm <span className='main-gradient'>Pranav Konjeti</span> 
               </h1>
