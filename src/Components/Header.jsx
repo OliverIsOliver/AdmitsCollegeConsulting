@@ -82,7 +82,7 @@ export default function Navbar() {
               <a 
                 href="https://thryvedesign.com" 
                 target='_blank'
-                className="text-md leading-6 bg-orange-700 text-white px-4 py-2 rounded-lg shadow-md"
+                className="text-md leading-6 bg-[#353ab9] text-white px-4 py-2 rounded-lg shadow-md"
               >
                 Hire Me <span aria-hidden="true">&rarr;</span>
               </a>

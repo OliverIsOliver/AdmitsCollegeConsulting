@@ -11,6 +11,10 @@
     @apply bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-500 to-red-500 via-orange-600 inline text-transparent bg-clip-text
   }
 
+  .hero-main-gradient {
+    @apply bg-[linear-gradient(90deg,#281e71_0%,#305cde_35%,#305cde_70%,#122859_100%)] inline text-transparent bg-clip-text;
+  }
+
   .full-gradient {
     @apply bg-gradient-to-r from-yellow-500 from-20% via-blue-500 to-green-500 inline text-transparent bg-clip-text
   }
