@@ -5,7 +5,7 @@ import logo from '../Images/pklogo.png'
 import pranavtextlogo from '../Images/pranavlogotext.png'
 
 const navigation = [
-  { name: 'Home', href: '/' },
+  { name: 'Home', href: '#top' },
   { name: 'About', href: '#about' },
   { name: 'Skills/Tools', href: '#tools' },
   { name: 'My Work', href: '#work' },
@@ -17,6 +17,13 @@ export default function Navbar() {
 
   const handleNavigationClick = (event, href) => {
     event.preventDefault();
+
+    if (href === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setMobileMenuOpen(false);
+      return;
+    }
+
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
