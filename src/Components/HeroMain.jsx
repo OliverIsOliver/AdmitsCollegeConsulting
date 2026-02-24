@@ -23,10 +23,11 @@ export default function HeroMain() {
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
               <div className="mx-auto w-full max-w-4xl text-left lg:mx-0">
                 <h1 className="text-5xl tracking-tight font-semibold text-black sm:text-8xl lg:text-7xl xl:text-8xl font-outfit">
-                  Hi There, I'm <span className='hero-main-gradient'>Pranav Konjeti</span> 
+                  Admissions Advice From{" "}
+                  <span className='hero-main-gradient'>Recent Admits.</span>
                 </h1>
                 <p className="mt-6 text-xl sm:text-3xl leading-8 text-black font-outfit">
-                  I designs and develops
+                  College consulting led by students who navigated
                   <span className='hero-main-gradient font-semibold ml-2'>
                 {/* <TypeAnimation
                         sequence={[
@@ -45,7 +46,7 @@ export default function HeroMain() {
                         repeat={Infinity}
                         style={{}}
                     /> */}
-                      impactful websites.
+                      competitive admissions.
                   </span>
                 </p>
                 
