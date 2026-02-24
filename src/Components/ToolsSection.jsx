@@ -61,7 +61,7 @@ function ServiceCard({ title, summary, icon: Icon, bullets }) {
 export default function ToolsSection() {
   return (
     <div
-      className="px-4 py-16 font-outfit xl:px-0"
+      className="mt-16 px-4 py-16 font-outfit xl:px-0"
       id="tools"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
