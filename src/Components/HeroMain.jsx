@@ -56,15 +56,14 @@ export default function HeroMain() {
                     className="rounded-md bg-[#5d4dcf] px-3.5 py-2.5 text-xl text-white shadow-xl shadow-[#281e71]/35 font-outfit w-40 h-15 flex items-center justify-center transform transition hover:scale-105"
                     onClick={(event) => handleNavigationClick(event, "#about")}
                   >
-                    About Me
+                    Why Us
                   </a>
                   <a 
-                    href="https://thryvedesign.com" 
-                    target="_blank"
+                    href="#schedule"
                     className="text-xl leading-6 text-black font-outfit transform transition hover:scale-105"
-                    onClick={(event) => handleNavigationClick(event, "#work")}
+                    onClick={(event) => handleNavigationClick(event, "#schedule")}
                   >
-                    Hire Me <span aria-hidden="true">→</span>
+                    Book a Call <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>

@@ -84,7 +84,7 @@ export default function Navbar() {
                 target='_blank'
                 className="text-md leading-6 bg-[#353ab9] text-white px-4 py-2 rounded-lg shadow-md"
               >
-                Hire Me <span aria-hidden="true">&rarr;</span>
+                Book a Call <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </nav>
@@ -131,7 +131,7 @@ export default function Navbar() {
                       target='_blank'
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-base  leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Hire Me 
+                      Book a Call 
                     </a>
                   </div>
                 </div>
