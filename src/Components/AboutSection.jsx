@@ -10,8 +10,7 @@ import {
 import { BiSolidCoffeeAlt } from "react-icons/bi";
 import { IoChatboxEllipses } from "react-icons/io5";
 import { MdOutlineBusinessCenter } from "react-icons/md";
-import mePicturenew from "../Images/pranavlatest.jpg";
-import pranavprofile from '../Images/pranavheadshot.jpg'
+import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
 import { IoMailOpen } from "react-icons/io5";
 
 export default function AboutMe() {
@@ -75,7 +74,7 @@ export default function AboutMe() {
               <img
                 loading="lazy"
                 class="rounded-xl w-5/6 lg:my-0 shadow-2xl ring-1 ring-black ring-opacity-5 rotate-2"
-                src={pranavprofile}
+                src={chatgptHeroImage}
               />
             </div>
           </div>

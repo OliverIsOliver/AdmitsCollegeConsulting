@@ -1,6 +1,7 @@
 import HeroMain from './Components/HeroMain'
 import AboutMe from './Components/AboutSection'
 import ToolsSection from './Components/ToolsSection'
+import FounderStorySection from './Components/FounderStorySection'
 import { Projects } from './Components/Projects'
 import ContactSection from './Components/Footer'
 import WavyLine from './Components/WavyLine'
@@ -21,6 +22,9 @@ function Homepage() {
 
         <Header />
         <HeroMain />
+        <div className="hidden">
+          <FounderStorySection />
+        </div>
         <AboutMe />
         <ToolsSection />
         <Projects />

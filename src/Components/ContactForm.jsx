@@ -14,7 +14,7 @@ function ContactForm() {
       <div className='flex flex-col gap-y-2 gap-8 py-4'>
           <div className='grid md:grid-cols-2 w-full gap-8'>
             <div className="">
-                <label htmlFor="name" className="block text-left font-semibold mb-2 text-lg bg-[linear-gradient(90deg,#c9b7ff_0%,#305cde_35%,#305cde_70%,#122859_100%)] bg-clip-text text-transparent">Your Name</label>
+                <label htmlFor="name" className="block text-left font-semibold mb-2 text-lg bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Name</label>
                 <input
                   id="name"
                   type="name"
@@ -31,7 +31,7 @@ function ContactForm() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-lg text-left font-semibold mb-2 bg-[linear-gradient(90deg,#c9b7ff_0%,#305cde_35%,#305cde_70%,#122859_100%)] bg-clip-text text-transparent">Your Email</label>
+                <label htmlFor="email" className="block text-lg text-left font-semibold mb-2 bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Email</label>
                 <input
                   id="email"
                   type="email"
@@ -50,7 +50,7 @@ function ContactForm() {
           </div>
                     
         <div className="mb-4">
-            <label htmlFor="message" className="block text-lg text-left font-semibold mb-2 bg-[linear-gradient(90deg,#c9b7ff_0%,#305cde_35%,#305cde_70%,#122859_100%)] bg-clip-text text-transparent">Your Message</label>
+            <label htmlFor="message" className="block text-lg text-left font-semibold mb-2 bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Message</label>
             <textarea
                 id="message"
                 name="message"
@@ -76,11 +76,11 @@ function ContactForm() {
         {state.submitting ? 'Submitting...' : 'Submit'}
       </button> */}
 
-      <button type='submit' disabled={state.submitting} class="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-[#305cde] transition duration-300 ease-out border-2 border-[#5d4dcf] rounded-md shadow-md group">
-        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#5d4dcf] group-hover:translate-x-0 ease">
+      <button type='submit' disabled={state.submitting} class="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-[#98AEEF] transition duration-300 ease-out border-2 border-[#98AEEF] rounded-md shadow-md group">
+        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#98AEEF] group-hover:translate-x-0 ease">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </span>
-        <span class="absolute flex items-center justify-center w-full h-full text-[#5d4dcf] transition-all duration-300 transform group-hover:translate-x-full ease">{state.submitting ? 'Submitting...' : 'Submit'}</span>
+        <span class="absolute flex items-center justify-center w-full h-full text-[#98AEEF] transition-all duration-300 transform group-hover:translate-x-full ease">{state.submitting ? 'Submitting...' : 'Submit'}</span>
         <span class="relative invisible">{state.submitting ? 'Submitting...' : 'Submit'}</span>
       </button>
 

@@ -106,7 +106,7 @@ export default function ToolsSection() {
             <div className="mt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-md bg-[#5d4dcf] px-5 py-3 text-base font-medium text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
+                className="inline-flex items-center justify-center rounded-md bg-[#5d4dcf] px-8 py-4 text-xl font-semibold text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
               >
                 Schedule a Call
               </a>
