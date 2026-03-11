@@ -1,99 +1,76 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useEffect } from "react";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xrgnolpq");
+  useEffect(() => {
+    ((C, A, L) => {
+      const p = (a, ar) => a.q.push(ar);
+      const d = C.document;
+      C.Cal =
+        C.Cal ||
+        function () {
+          const cal = C.Cal;
+          const ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () {
+              p(api, arguments);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else {
+              p(cal, ar);
+            }
+            return;
+          }
+          p(cal, ar);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-  if (state.succeeded) {
-      return <p className="text-white text-xl font-medium">Thanks for sending a message! I'll get back to you within 24 hours!</p>;
-  }
+    window.Cal("init", "contact", { origin: "https://app.cal.com" });
+    window.Cal.ns.contact("inline", {
+      elementOrSelector: "#cal-inline-contact",
+      calLink: "olivermaher/30min",
+      config: { layout: "month_view" },
+    });
+    window.Cal.ns.contact("ui", {
+      hideEventTypeDetails: true,
+      layout: "month_view",
+    });
 
+    return () => {
+      const inlineEl = document.getElementById("cal-inline-contact");
+      if (inlineEl) inlineEl.innerHTML = "";
+    };
+  }, []);
+
+  /*
   return (
-    <form onSubmit={handleSubmit} id='contact' className="bg-[#122859] w-full px-10 py-10 rounded-md font-outfit flex flex-col items-center justify-center shadow-[0_20px_45px_rgba(18,40,89,0.18)]">
-
-      <div className='flex flex-col gap-y-2 gap-8 py-4'>
-          <div className='grid md:grid-cols-2 w-full gap-8'>
-            <div className="">
-                <label htmlFor="name" className="block text-left font-semibold mb-2 text-lg bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Name</label>
-                <input
-                  id="name"
-                  type="name"
-                  name="name"
-                  placeholder='your name'
-                  required
-                  className="shadow flex text-center appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-                <ValidationError
-                  prefix="Name"
-                  field="name"
-                  errors={state.errors}
-                  className="text-red-500 text-sm"
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-lg text-left font-semibold mb-2 bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  placeholder='example@gmail.com'
-                  className="shadow text-center appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                  className="text-red-500 text-sm"
-                />
-              </div>
-          </div>
-                    
-        <div className="mb-4">
-            <label htmlFor="message" className="block text-lg text-left font-semibold mb-2 bg-gradient-to-br from-[#6b5edd] via-[#6f98ff] to-[#6b5edd] bg-clip-text text-transparent">Your Message</label>
-            <textarea
-                id="message"
-                name="message"
-                placeholder='Your Message goes here'
-                required
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-            <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-                className="text-red-500 text-sm"
-            />
-        </div>
-
-      </div>
-
-      {/* <button 
-        type="submit" 
-        disabled={state.submitting}
-        className="bg-orange-500 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-      >
-        {state.submitting ? 'Submitting...' : 'Submit'}
-      </button> */}
-
-      <button type='submit' disabled={state.submitting} class="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-[#98AEEF] transition duration-300 ease-out border-2 border-[#98AEEF] rounded-md shadow-md group">
-        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#98AEEF] group-hover:translate-x-0 ease">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </span>
-        <span class="absolute flex items-center justify-center w-full h-full text-[#98AEEF] transition-all duration-300 transform group-hover:translate-x-full ease">{state.submitting ? 'Submitting...' : 'Submit'}</span>
-        <span class="relative invisible">{state.submitting ? 'Submitting...' : 'Submit'}</span>
-      </button>
-
-    </form>
-  );
-}
-
-function App() {
-  return (
-    <div className="flex justify-center items-center">
-      <ContactForm />
+    <div className="w-full">
+      <div
+        id="cal-inline-contact"
+        className="mx-auto flex h-[520px] w-full max-w-none items-center justify-center overflow-hidden rounded-2xl border border-[#d9e3ff] bg-white [&>*]:h-full [&>*]:w-full [&>*]:max-w-none [&_iframe]:h-full [&_iframe]:w-full [&_iframe]:max-w-none"
+      />
     </div>
   );
+  */
+
+  return (
+    <section className="w-full flex justify-center py-0">
+      <div
+        id="cal-inline-contact"
+        className="w-full max-w-5xl"
+      />
+    </section>
+  );
 }
 
-export default App;
+export default ContactForm;

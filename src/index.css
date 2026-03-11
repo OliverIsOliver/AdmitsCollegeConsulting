@@ -197,3 +197,12 @@
 .slide-in-right {
   animation: slideInRight 0.5s ease-out forwards;
 }
+
+cal-inline {
+  --booker-main-width: 640px;
+  --booker-meta-width: 300px;
+}
+
+cal-inline iframe {
+  width: 100% !important;
+}
