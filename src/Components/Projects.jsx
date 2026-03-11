@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <div className="max-w-[100rem] mx-auto">
       <div
-        className="rounded-xl flex flex-col justify-center items-center mt-9 mb-8 mx-0 font-outfit"
+        className="rounded-xl flex flex-col justify-center items-center mt-0 mb-8 mx-0 font-outfit"
         id="work"
       >
         <div className="w-full max-w-7xl px-2 sm:px-6 lg:px-8" id="schedule">
