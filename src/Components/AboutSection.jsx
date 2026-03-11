@@ -32,39 +32,35 @@ export default function AboutMe() {
 
                 <div class="mt-3">
                   <h2 class="text-4xl mb-1 font-semibold tracking-wide text-white">
-                    A Bit{" "}
-                    <span className="text-[#1f1d70] underline">About Me.</span>
+                    Why Learn From{" "}
+                    <span className="text-[#1f1d70] underline">Recent Admits?</span>
                   </h2>
                   <p className="px-4 text-black border-l-4 border-[#122859] text-xl leading-relaxed my-4">
-                    <span className="text-[#0c1b3b] font-semibold">
-                      Hey!
+                    Getting into top colleges today is more competitive than
+                    ever, and the process can feel confusing and overwhelming.
+                    <br />
+                    <br />
+                    Our mentors are{" "}
+                    <span className="font-semibold text-[#1f1d70]">
+                      recently admitted students from top universities
                     </span>{" "}
-                    I'm Pranav; I'm an 18-year-old based out of Richmond, Virginia studying
-                    Computer Science @ UIUC.
+                    who successfully navigated the admissions process just a
+                    few years ago. We understand what colleges are actually
+                    looking for today-from essays and extracurriculars to
+                    building a compelling story.
                     <br />
                     <br />
-
-                    Here's a quick rundown of what I've done. I built{" "}
-                    <a
-                      href="https://talem.org"
-                      target="_blank"
-                      className="underline text-[#1f1d70]"
-                    >
-                      talem.org
-                    </a>
-                    , a site connecting students with opportunities which was funded by Emergent Ventures. I also run{" "}
-                    <a
-                      href="https://thryvedesign.com"
-                      target="_blank"
-                      className="underline text-[#1f1d70]"
-                    >
-                      ThryveDesign
-                    </a>
-                    , my web-development agency where I've worked with 25+ businesses and generated low 5-figure revenue in under a year.
-                    <br />
-                    <br />
-                    Right now, I'm continuing to run my agency and working on a new social networking app.
-                    Feel free to reach out at anytime!
+                    Instead of generic advice, you'll get{" "}
+                    <span className="font-semibold text-[#1f1d70]">
+                      personalized guidance from students who were recently in
+                      your exact position
+                    </span>
+                    . Our team includes mentors from{" "}
+                    <span className="font-semibold text-[#1f1d70]">
+                      Northwestern and other top universities
+                    </span>
+                    , ready to help you build stronger applications and
+                    approach the process with confidence.
                   </p>
 
                 </div>
