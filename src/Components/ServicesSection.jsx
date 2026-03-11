@@ -73,7 +73,7 @@ function ServiceCard({ title, summary, icon: Icon, bullets, image }) {
 export default function ServicesSection() {
   return (
     <div
-      className="mt-16 px-4 pt-16 pb-6 font-outfit xl:px-0"
+      className="mt-16 scroll-mt-24 px-4 pt-16 pb-6 font-outfit xl:px-0"
       id="services"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

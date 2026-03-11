@@ -4,7 +4,7 @@ export function PricingSection() {
   return (
     <div className="max-w-[100rem] mx-auto">
       <div
-        className="rounded-xl flex flex-col justify-center items-center mt-0 mb-8 mx-0 font-outfit"
+        className="rounded-xl scroll-mt-[7.5rem] flex flex-col justify-center items-center mt-0 mb-8 mx-0 font-outfit"
         id="pricing"
       >
         <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
