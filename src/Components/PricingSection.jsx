@@ -41,7 +41,7 @@ export function PricingSection() {
                 <div className="mt-6">
                   <a
                     href="#schedule"
-                    className="inline-flex items-center justify-center rounded-md bg-[#5d4dcf] px-8 py-4 text-xl font-semibold text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
+                    className="inline-flex items-center justify-center rounded-md bg-[#353ab9] px-8 py-4 text-xl font-semibold text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
                   >
                     Book a Free Call
                   </a>

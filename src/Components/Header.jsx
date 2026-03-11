@@ -89,7 +89,7 @@ export default function Navbar() {
                 className="text-[1.05rem] leading-6 bg-[#353ab9] text-white px-4 py-2 rounded-lg shadow-md"
                 onClick={(event) => handleNavigationClick(event, '#schedule')}
               >
-                Book a Call <span aria-hidden="true">&rarr;</span>
+                Book a Free Call <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </nav>
@@ -136,7 +136,7 @@ export default function Navbar() {
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={(event) => handleNavigationClick(event, '#schedule')}
                     >
-                      Book a Call
+                      Book a Free Call
                     </a>
                   </div>
                 </div>
