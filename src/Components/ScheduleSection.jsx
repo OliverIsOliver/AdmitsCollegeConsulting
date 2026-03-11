@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-  FaCoffee,
-  FaYoutube,
-} from "react-icons/fa";
 import ScheduleForm from "./ScheduleForm";
-import { BiSolidCoffeeAlt } from "react-icons/bi";
 
 function ScheduleSection() {
   return (
@@ -86,61 +78,11 @@ function ScheduleSection() {
         </footer> */}
 
         <footer className="mt-10">
-          <div className="bg-[#88A0E8] pt-10 px-10">
-            <div className="max-w-screen-lg px-4 sm:px-6 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto text-[#122859]">
-
-              <div className="p-5 flex flex-col gap-y-2 items-start">
-                <h3 className="font-bold text-xl text-[#122859]">Pranav Konjeti</h3>
-                
-                <a href="https://buymeacoffee.com/pranavkonjeti" target="_blank">
-                  <img className="max-w-[150px] shadow-md" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee"/>
-                </a>
-              </div>
-
-              <div className="p-5 font-light">
-                <div className="text-sm uppercase text-[#122859] font-bold">
-                  Quick Links
-                </div>
-                <a className="my-3 block hover:underline" href="https://www.linkedin.com/in/pranav-konjeti/" target="_blank">
-                  Linkedin <span className="text-teal-600 text-xs p-1"></span>
-                </a>
-                <a className="my-3 block hover:underline" href="https://www.youtube.com/@pranavkonjeti" target="_blank">
-                  Youtube <span className="text-teal-600 text-xs p-1"></span>
-                </a>
-                <a className="my-3 block hover:underline" href="https://github.com/PkTheCoda" target="_blank">
-                  Github
-                </a>
-              </div>
-
-              <div className="p-5 font-light">
-                <div className="text-sm uppercase text-[#122859] font-bold">
-                  Projects
-                </div>
-                <a className="my-3 block hover:underline" href="https://talem.org" target="_blank"> 
-                  talem.org<span className="text-teal-600 text-xs p-1"></span>
-                </a>
-                <a className="my-3 block hover:underline" href="https://desourcedesign.vercel.app" target="_blank">
-                  desource.app<span className="text-teal-600 text-xs p-1"></span>
-                </a>
-                <a className="my-3 block hover:underline" href="https://learntheweb.org" target="_blank">
-                  learntheweb.org<span className="text-teal-600 text-xs p-1"></span>
-                </a>
-              </div>
-
-              <div className="p-5 font-light">
-                <div className="text-sm uppercase text-[#122859] font-bold">
-                  Contact Me
-                </div>
-                <a className="my-3 block" href="mailto:pranavkonjeti@gmail.com">
-                  pranavkonjeti@gmail.com
-                  <span className="text-teal-600 text-xs p-1"></span>
-                </a>
-                <p className="my-3 block">
-                  For hiring inquires, please contact me through my <a href="https://thryvedesign.com" target="_blank" className="font-medium underline">business website</a>
-                  <span className="text-teal-600 text-xs p-1"></span>
-                </p>
-              </div>
-              
+          <div className="bg-[#88A0E8] px-10 py-10">
+            <div className="mx-auto flex max-w-7xl flex-col items-center font-outfit">
+              <p className="text-center text-base font-bold text-[#122859]">
+                © 2026 Admits College Consultings. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>

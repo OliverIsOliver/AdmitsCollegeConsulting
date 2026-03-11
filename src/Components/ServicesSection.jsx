@@ -61,7 +61,7 @@ function ServiceCard({ title, summary, icon: Icon, bullets, image }) {
       <ul role="list" className="mt-6 space-y-3">
         {bullets.map((bullet) => (
           <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-slate-700 sm:text-base">
-            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[linear-gradient(90deg,#281e71_0%,#305cde_55%,#122859_100%)]" />
+            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[radial-gradient(circle_at_center,#305cde_0%,#122859_100%)]" />
             <span>{bullet}</span>
           </li>
         ))}
