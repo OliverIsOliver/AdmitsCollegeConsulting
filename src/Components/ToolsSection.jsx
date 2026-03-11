@@ -1,5 +1,7 @@
 import React from "react";
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
+import planImage from "../Images/ChatGPT Image Plan.png";
+import writingImage from "../Images/ChatGPT Image Writing.png";
 
 const serviceCards = [
   {
@@ -7,6 +9,7 @@ const serviceCards = [
     summary:
       "Build a compelling, cohesive application plan before senior year begins.",
     icon: MapIcon,
+    image: planImage,
     bullets: [
       "Extracurricular positioning and activity audit",
       "Major and academic direction clarity",
@@ -20,6 +23,7 @@ const serviceCards = [
     title: "Essays & Application Support",
     summary: "Craft essays that are sharp, authentic, and competitive.",
     icon: PencilSquareIcon,
+    image: writingImage,
     bullets: [
       "Personal statement brainstorming",
       "Common App essay feedback",
@@ -31,9 +35,17 @@ const serviceCards = [
   },
 ];
 
-function ServiceCard({ title, summary, icon: Icon, bullets }) {
+function ServiceCard({ title, summary, icon: Icon, bullets, image }) {
   return (
-    <div className="rounded-3xl border border-[#d9e3ff] bg-[#f8fbff] p-8 shadow-[0_18px_40px_rgba(18,40,89,0.08)]">
+    <div className="rounded-3xl border border-[#d9e3ff] bg-white p-8 shadow-[0_18px_40px_rgba(18,40,89,0.08)]">
+      <div className="mb-6 rounded-2xl">
+        <img
+          src={image}
+          alt={`${title} preview`}
+          className="w-full object-contain"
+        />
+      </div>
+
       <div className="relative mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl">
         <div className="absolute inset-0 rounded-xl bg-[linear-gradient(90deg,#281e71_0%,#305cde_45%,#122859_100%)] opacity-20 blur-[2px]" />
         <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white ring-1 ring-[#305cde]/20">
@@ -78,39 +90,6 @@ export default function ToolsSection() {
             {serviceCards.map((card) => (
               <ServiceCard key={card.title} {...card} />
             ))}
-          </div>
-
-          <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-[#d9e3ff] bg-[#f8fbff] p-8 text-center shadow-[0_22px_50px_rgba(18,40,89,0.08)]">
-            <h3 className="text-2xl font-semibold tracking-tight text-[#0c1b3b] sm:text-3xl">
-              Transparent Pricing
-            </h3>
-            <p className="mt-3 text-base text-slate-600 sm:text-lg">
-              Flexible support based on your needs.
-            </p>
-
-            <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <div className="min-w-[12rem] rounded-2xl border border-[#cfdcff] bg-white px-6 py-4 shadow-sm">
-                <div className="text-sm font-medium text-slate-500">Hourly</div>
-                <div className="mt-1 text-2xl font-semibold text-[#0c1b3b]">$80 / hour</div>
-              </div>
-              <div className="min-w-[12rem] rounded-2xl border border-[#cfdcff] bg-white px-6 py-4 shadow-sm">
-                <div className="text-sm font-medium text-slate-500">Package</div>
-                <div className="mt-1 text-2xl font-semibold text-[#0c1b3b]">$300 / 5-hour package</div>
-              </div>
-            </div>
-
-            <p className="mt-5 text-sm font-medium text-[#122859] sm:text-base">
-              Free 20-minute intro consultation.
-            </p>
-
-            <div className="mt-6">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-md bg-[#5d4dcf] px-8 py-4 text-xl font-semibold text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
-              >
-                Schedule a Call
-              </a>
-            </div>
           </div>
       </div>
     </div>

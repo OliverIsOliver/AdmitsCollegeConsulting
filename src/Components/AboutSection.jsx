@@ -81,7 +81,7 @@ export default function AboutMe() {
 
           <div className="mt-16 mb-28 px-6 text-center font-outfit sm:px-10 lg:px-16">
             <h2 className="text-white text-2xl font-bold">
-              Manifest Your Dream School
+              Reach Your Dream School
             </h2>
             <ul
               role="list"
