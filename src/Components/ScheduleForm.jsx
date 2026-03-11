@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function ContactForm() {
+function ScheduleForm() {
   useEffect(() => {
     ((C, A, L) => {
       const p = (a, ar) => a.q.push(ar);
@@ -35,19 +35,19 @@ function ContactForm() {
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    window.Cal("init", "contact", { origin: "https://app.cal.com" });
-    window.Cal.ns.contact("inline", {
-      elementOrSelector: "#cal-inline-contact",
+    window.Cal("init", "schedule", { origin: "https://app.cal.com" });
+    window.Cal.ns.schedule("inline", {
+      elementOrSelector: "#cal-inline-schedule",
       calLink: "olivermaher/30min",
       config: { layout: "month_view" },
     });
-    window.Cal.ns.contact("ui", {
+    window.Cal.ns.schedule("ui", {
       hideEventTypeDetails: true,
       layout: "month_view",
     });
 
     return () => {
-      const inlineEl = document.getElementById("cal-inline-contact");
+      const inlineEl = document.getElementById("cal-inline-schedule");
       if (inlineEl) inlineEl.innerHTML = "";
     };
   }, []);
@@ -56,7 +56,7 @@ function ContactForm() {
   return (
     <div className="w-full">
       <div
-        id="cal-inline-contact"
+        id="cal-inline-schedule"
         className="mx-auto flex h-[520px] w-full max-w-none items-center justify-center overflow-hidden rounded-2xl border border-[#d9e3ff] bg-white [&>*]:h-full [&>*]:w-full [&>*]:max-w-none [&_iframe]:h-full [&_iframe]:w-full [&_iframe]:max-w-none"
       />
     </div>
@@ -66,11 +66,11 @@ function ContactForm() {
   return (
     <section className="w-full flex justify-center py-0">
       <div
-        id="cal-inline-contact"
+        id="cal-inline-schedule"
         className="w-full max-w-5xl"
       />
     </section>
   );
 }
 
-export default ContactForm;
+export default ScheduleForm;

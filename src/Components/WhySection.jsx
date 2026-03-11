@@ -13,12 +13,12 @@ import { MdOutlineBusinessCenter } from "react-icons/md";
 import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
 import { IoMailOpen } from "react-icons/io5";
 
-export default function AboutMe() {
+export default function WhySection() {
   return (
     <>
       <div
         class="relative overflow-hidden bg-[#98AEEF] -skew-y-2 px-4 xl:px-0 pt-16 space-y-24 font-outfit"
-        id="about"
+        id="why"
       >
         <div class="relative skew-y-2">
           <div class="lg:mx-auto lg:max-w-7xl flex flex-col lg:flex-row lg:gap-12 lg:px-8">

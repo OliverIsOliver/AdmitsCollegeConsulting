@@ -1,13 +1,13 @@
 import React from "react";
 
-export function Projects() {
+export function PricingSection() {
   return (
     <div className="max-w-[100rem] mx-auto">
       <div
         className="rounded-xl flex flex-col justify-center items-center mt-0 mb-8 mx-0 font-outfit"
-        id="work"
+        id="pricing"
       >
-        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8" id="schedule">
+        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="w-full rounded-3xl border border-[#d9e3ff] bg-white p-6 sm:p-8 shadow-[0_22px_50px_rgba(18,40,89,0.08)]">
             <div className="mx-auto max-w-3xl text-center">
               <div className="flex flex-col items-center">
@@ -35,15 +35,15 @@ export function Projects() {
                 </div>
 
                 <p className="mt-5 text-sm font-medium text-[#122859] sm:text-base">
-                  Free 20-minute intro consultation.
+                  Free 30-minute intro consultation.
                 </p>
 
                 <div className="mt-6">
                   <a
-                    href="#contact"
+                    href="#schedule"
                     className="inline-flex items-center justify-center rounded-md bg-[#5d4dcf] px-8 py-4 text-xl font-semibold text-white shadow-lg shadow-[#281e71]/25 transition hover:scale-[1.02]"
                   >
-                    Schedule a Call
+                    Book a Free Call
                   </a>
                 </div>
               </div>

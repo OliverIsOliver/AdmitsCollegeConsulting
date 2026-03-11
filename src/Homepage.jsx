@@ -1,15 +1,63 @@
+import { useEffect } from 'react'
 import HeroMain from './Components/HeroMain'
-import AboutMe from './Components/AboutSection'
-import ToolsSection from './Components/ToolsSection'
+import WhySection from './Components/WhySection'
+import ServicesSection from './Components/ServicesSection'
 import FounderStorySection from './Components/FounderStorySection'
-import { Projects } from './Components/Projects'
-import ContactSection from './Components/Footer'
+import { PricingSection } from './Components/PricingSection'
+import ScheduleSection from './Components/ScheduleSection'
 import WavyLine from './Components/WavyLine'
 import Header from './Components/Header'
 import { Helmet } from 'react-helmet';
 import BlogHome from './Components/BlogHome'
 
 function Homepage() {
+  useEffect(() => {
+    const sectionIds = ['why', 'services', 'pricing', 'schedule']
+
+    const getActiveHash = () => {
+      const marker = 140
+      let activeHash = null
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id)
+        if (!section) return
+
+        const rect = section.getBoundingClientRect()
+        if (rect.top <= marker) {
+          activeHash = `#${id}`
+        }
+      })
+
+      return activeHash
+    }
+
+    const updateHashOnScroll = () => {
+      const nextHash = getActiveHash()
+      if (!nextHash) {
+        if (window.location.hash) {
+          window.history.replaceState(
+            null,
+            '',
+            `${window.location.pathname}${window.location.search}`
+          )
+        }
+        return
+      }
+
+      if (window.location.hash !== nextHash) {
+        window.history.replaceState(null, '', nextHash)
+      }
+    }
+
+    updateHashOnScroll()
+    window.addEventListener('scroll', updateHashOnScroll, { passive: true })
+    window.addEventListener('resize', updateHashOnScroll)
+
+    return () => {
+      window.removeEventListener('scroll', updateHashOnScroll)
+      window.removeEventListener('resize', updateHashOnScroll)
+    }
+  }, [])
 
   return (
     <div>
@@ -25,10 +73,10 @@ function Homepage() {
         <div className="hidden">
           <FounderStorySection />
         </div>
-        <AboutMe />
-        <ToolsSection />
-        <Projects />
-        <ContactSection />
+        <WhySection />
+        <ServicesSection />
+        <PricingSection />
+        <ScheduleSection />
     </div>
   )
 }

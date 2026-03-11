@@ -5,11 +5,10 @@ import logo from '../Images/pklogo.png'
 import pranavtextlogo from '../Images/pranavlogotext.png'
 
 const navigation = [
-  { name: 'Home', href: '#top' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#tools' },
-  { name: 'FAQs', href: '#work' },
-  { name: 'Reach Out', href: '#contact' },
+  { name: 'Home', href: '#hero' },
+  { name: 'Why Us', href: '#why' },
+  { name: 'Services', href: '#services' },
+  { name: 'Pricing', href: '#pricing' },
 ]
 
 export default function Navbar() {
@@ -18,8 +17,13 @@ export default function Navbar() {
   const handleNavigationClick = (event, href) => {
     event.preventDefault();
 
-    if (href === '#top') {
+    if (href === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.replaceState(
+        null,
+        '',
+        `${window.location.pathname}${window.location.search}`
+      );
       setMobileMenuOpen(false);
       return;
     }
@@ -27,6 +31,7 @@ export default function Navbar() {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
+      window.history.replaceState(null, '', href);
     }
     setMobileMenuOpen(false); 
   };
@@ -71,7 +76,7 @@ export default function Navbar() {
                 <a 
                   key={item.name} 
                   href={item.href} 
-                  className="text-md leading-6 text-black transition transform hover:scale-110 font-light"
+                  className="text-[1.05rem] leading-6 text-black transition transform hover:scale-110 font-light"
                   onClick={(event) => handleNavigationClick(event, item.href)}
                 >
                   {item.name}
@@ -80,9 +85,9 @@ export default function Navbar() {
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end font-light">
               <a 
-                href="https://thryvedesign.com" 
-                target='_blank'
-                className="text-md leading-6 bg-[#353ab9] text-white px-4 py-2 rounded-lg shadow-md"
+                href="#schedule"
+                className="text-[1.05rem] leading-6 bg-[#353ab9] text-white px-4 py-2 rounded-lg shadow-md"
+                onClick={(event) => handleNavigationClick(event, '#schedule')}
               >
                 Book a Call <span aria-hidden="true">&rarr;</span>
               </a>
@@ -118,7 +123,7 @@ export default function Navbar() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base  leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
                         onClick={(event) => handleNavigationClick(event, item.href)}
                       >
                         {item.name}
@@ -127,11 +132,11 @@ export default function Navbar() {
                   </div>
                   <div className="py-6">
                     <a
-                      href="https://thryvedesign.com"
-                      target='_blank'
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base  leading-7 text-gray-900 hover:bg-gray-50"
+                      href="#schedule"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={(event) => handleNavigationClick(event, '#schedule')}
                     >
-                      Book a Call 
+                      Book a Call
                     </a>
                   </div>
                 </div>

@@ -4,6 +4,15 @@ import chatgptHeroImage from "../Images/ChatGPT Image Feb 23, 2026, 12_19_13 PM.
 
 
 export default function HeroMain() {
+    const handleNavigationClick = (event, href) => {
+      event.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState(null, "", href);
+      }
+    };
+
     return (
         <>
         <div id="hero" className="relative isolate px-6 pt-14 lg:px-8">
@@ -52,9 +61,9 @@ export default function HeroMain() {
                 
                 <div className="mt-10 flex items-center justify-start gap-x-6">
                   <a
-                    href="#about"
+                    href="#why"
                     className="rounded-md bg-[#5d4dcf] px-3.5 py-2.5 text-xl text-white shadow-xl shadow-[#281e71]/35 font-outfit w-40 h-15 flex items-center justify-center transform transition hover:scale-105"
-                    onClick={(event) => handleNavigationClick(event, "#about")}
+                    onClick={(event) => handleNavigationClick(event, "#why")}
                   >
                     Why Us
                   </a>
@@ -63,7 +72,7 @@ export default function HeroMain() {
                     className="text-xl leading-6 text-black font-outfit transform transition hover:scale-105"
                     onClick={(event) => handleNavigationClick(event, "#schedule")}
                   >
-                    Book a Call <span aria-hidden="true">→</span>
+                    Book a Free Call <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>
