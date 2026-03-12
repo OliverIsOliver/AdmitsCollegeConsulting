@@ -18,12 +18,10 @@ function ScheduleSection() {
       <section className="bg-[#98AEEF] pt-8 scroll-mt-[7.5rem]" id="schedule">
         <div className="max-w-[80rem] mx-auto text-center px-2 flex flex-col gap-y-4 items-center">
           <h2 className="six-title font-semibold text-[#122859]">
-            Get in Touch
+            Book a Free Call
           </h2>
           <p className="text-lg text-[#122859] px-2 max-w-xl text-center">
-            Have a question or a project in mind? Don't hesitate to reach out!
-            Whether it's discussing potential collaborations or simply saying
-            hello, I'm here and ready to chat.
+            Schedule a free 30-minute intro call and let’s discuss your goals and how we can build a strong application together.
           </p>
 
           <ScheduleForm />

@@ -5,32 +5,32 @@ import writingImage from "../Images/ChatGPT Image Writing.png";
 
 const serviceCards = [
   {
-    title: "Admissions Strategy",
+    title: "Application Support",
     summary:
-      "Build a compelling, cohesive application plan before senior year begins.",
+      "Understanding your goals and preferences to build a compelling narrative.",
     icon: MapIcon,
     image: planImage,
     bullets: [
-      "Extracurricular positioning and activity audit",
-      "Major and academic direction clarity",
-      "School list strategy (reach / target / safety balance)",
-      "Summer program selection",
-      "Scholarship targeting",
-      "Personal narrative development",
+      "Identify your future area of study",
+      "Develop your personal brand",
+      "Position your extracurriculars and awards",
+      "Find your summer program",
+      "Construct your school list",
+      "Maximize your scholarships",
     ],
   },
   {
-    title: "Essays & Application Support",
-    summary: "Craft essays that are sharp, authentic, and competitive.",
+    title: "Essay Writing",
+    summary: "Crafting sharp, authentic, and competitive essays.",
     icon: PencilSquareIcon,
     image: writingImage,
     bullets: [
-      "Personal statement brainstorming",
-      "Common App essay feedback",
-      "Supplemental essay strategy",
-      "Summer program essays",
-      "Activity descriptions optimization",
-      "Interview preparation",
+      "Brainstorm unique essay topics",
+      "Develop a strong story arc for your essays",
+      "Revise drafts for proper essay structure",
+      "Ensure cohesion across your application essays",
+      "Provide line-by-line feedback and edits",
+      "Polish and proofread final drafts",
     ],
   },
 ];

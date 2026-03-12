@@ -80,7 +80,7 @@ export default function WhySection() {
             </div>
           </div>
 
-          <div className="mt-16 mb-28 px-6 text-center font-outfit sm:px-10 lg:px-16">
+          <div className="mt-8 mb-28 px-6 text-center font-outfit sm:px-10 lg:px-16">
             <h2 className="text-white text-2xl font-bold">
               Reach Your Dream School
             </h2>

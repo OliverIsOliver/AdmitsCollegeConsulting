@@ -15,13 +15,8 @@ export function PricingSection() {
                   Transparent Pricing
                 </h3>
                 <p className="mt-3 text-base text-slate-600 sm:text-lg">
-                  Get high-impact support that moves your application forward each week.
+                  Flexible support based on your needs.
                 </p>
-                <ul className="mt-4 space-y-2 text-sm sm:text-base text-slate-700">
-                  <li>Focused sessions with clear next steps after every call.</li>
-                  <li>Fast feedback to keep essays and applications moving.</li>
-                  <li>Flexible format so you only pay for what you need.</li>
-                </ul>
 
                 <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:items-stretch">
                   <div className="min-w-[12rem] rounded-2xl border border-[#cfdcff] bg-white px-6 py-4 shadow-sm">
