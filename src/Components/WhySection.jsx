@@ -33,34 +33,39 @@ export default function WhySection() {
                 <div class="mt-3">
                   <h2 class="text-4xl mb-1 font-semibold tracking-wide text-white">
                     Why Learn From{" "}
-                    <span className="text-[#1f1d70] underline">Recent Admits?</span>
+                    <span className="text-[#1f1d70] font-bold">Recent Admits?</span>
                   </h2>
                   <p className="px-4 text-black border-l-4 border-[#122859] text-xl leading-relaxed my-4">
-                    Getting into top colleges today is more competitive than
-                    ever, and the process can feel confusing and overwhelming.
+                    Getting into top universities is harder than ever. Top
+                    schools that once admitted around{" "}
+                    <a
+                      href="https://www.ivycoach.com/the-ivy-coach-blog/college-admissions/college-admission-rates-get-lower-lower/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[#1f1d70] underline"
+                    >
+                      25% of applicants now accept under 10%
+                    </a>
+                    , with rates still declining.
                     <br />
                     <br />
-                    Our mentors are{" "}
-                    <span className="font-semibold text-[#1f1d70]">
-                      recently admitted students from top universities
-                    </span>{" "}
-                    who successfully navigated the admissions process just a
-                    few years ago. We understand what colleges are actually
-                    looking for today-from essays and extracurriculars to
-                    building a compelling story.
+                    Many families turn to expensive counselors who charge
+                    five-figure fees, but often
+                    provide generic and outdated advice. Having recently gone
+                    through the process ourselves,{" "}
+                    we know how confusing and
+                    stressful it can be.
                     <br />
                     <br />
-                    Instead of generic advice, you'll get{" "}
-                    <span className="font-semibold text-[#1f1d70]">
-                      personalized guidance from students who were recently in
-                      your exact position
-                    </span>
-                    . Our team includes mentors from{" "}
-                    <span className="font-semibold text-[#1f1d70]">
-                      Northwestern and other top universities
-                    </span>
-                    , ready to help you build stronger applications and
-                    approach the process with confidence.
+                    That&apos;s why we started Admits College Consulting: to
+                    offer personalized, first-hand guidance from students
+                    who just got into top schools. We&apos;ll help plan your
+                    activities, craft compelling essays, and build a strong
+                    application for a fraction of the cost. Schedule a{" "}
+                    <a href="#schedule" className="text-[#1f1d70] underline">
+                      free intro call
+                    </a>{" "}
+                    and see how we can help.
                   </p>
 
                 </div>

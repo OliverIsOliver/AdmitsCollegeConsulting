@@ -79,10 +79,10 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl font-semibold tracking-tight text-[#0c1b3b] sm:text-7xl">
-              How I <span className="hero-main-gradient">Help</span>
+              <span className="hero-main-gradient">Complete</span> Admissions Package
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#122859]/80 sm:text-xl">
-              Strategy and execution — from building your story to polishing your essays.
+              Everything you need to craft a standout application and earn your spot at a top university.
             </p>
           </div>
 

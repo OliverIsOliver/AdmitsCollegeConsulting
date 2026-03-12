@@ -81,7 +81,7 @@ function ScheduleSection() {
           <div className="bg-[#88A0E8] px-10 py-10">
             <div className="mx-auto flex max-w-7xl flex-col items-center font-outfit">
               <p className="text-center text-base font-bold text-[#122859]">
-                © 2026 Admits College Consultings. All rights reserved.
+                © {new Date().getFullYear()} Admits College Consultings. All rights reserved.
               </p>
             </div>
           </div>
