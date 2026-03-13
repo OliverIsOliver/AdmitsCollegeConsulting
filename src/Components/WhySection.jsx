@@ -16,7 +16,19 @@ import { IoMailOpen } from "react-icons/io5";
 
 export default function WhySection() {
   const photoMix = useMemo(
-    () => [chatgptHeroImage, headshotImage].filter(Boolean),
+    () =>
+      [
+        {
+          src: chatgptHeroImage,
+          name: "Oliver M.",
+          university: "CS @ Northwestern",
+        },
+        {
+          src: headshotImage,
+          name: "Tyler H.",
+          university: "Business @ UNC Kenan-Flagler",
+        },
+      ].filter((photo) => Boolean(photo.src)),
     []
   );
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
@@ -120,7 +132,7 @@ export default function WhySection() {
 
                   return (
                   <div
-                    key={`${photo}-${index}`}
+                    key={`${photo.name}-${index}`}
                     onClick={isFront ? goToNextPhoto : undefined}
                     className={`absolute inset-0 rounded-2xl shadow-2xl transition-all duration-700 ease-out ${
                       isFront ? "cursor-pointer" : ""
@@ -128,10 +140,20 @@ export default function WhySection() {
                   >
                     <img
                       loading="lazy"
-                      src={photo}
+                      src={photo.src}
                       alt="Why us profile"
                       className="h-full w-full rounded-2xl object-cover"
                     />
+                    {isFront && (
+                      <div className="pointer-events-none absolute bottom-3 left-3 rounded-xl bg-white/95 px-3 py-2 text-left shadow-lg">
+                        <p className="text-sm font-semibold leading-tight text-[#122859] sm:text-base">
+                          {photo.name}
+                        </p>
+                        <p className="text-xs leading-tight text-[#305cde] sm:text-sm">
+                          {photo.university}
+                        </p>
+                      </div>
+                    )}
                   </div>
                   );
                 })}
