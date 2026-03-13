@@ -1,4 +1,3 @@
-import React from "react";
 import ScheduleForm from "./ScheduleForm";
 
 function ScheduleSection() {

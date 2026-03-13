@@ -1,5 +1,3 @@
-import React from "react";
-
 export function PricingSection() {
   return (
     <div className="max-w-[100rem] mx-auto">

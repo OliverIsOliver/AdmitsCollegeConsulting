@@ -1,18 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaVolleyballBall,
-  FaTableTennis,
-  FaMusic,
-  FaCamera,
-} from "react-icons/fa";
-import { BiSolidCoffeeAlt } from "react-icons/bi";
+import { useEffect, useMemo, useState } from "react";
 import { IoChatboxEllipses } from "react-icons/io5";
-import { MdOutlineBusinessCenter } from "react-icons/md";
 import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
 import headshotImage from "../Images/headshot1.jpeg";
-import { IoMailOpen } from "react-icons/io5";
 
 export default function WhySection() {
   const photoMix = useMemo(

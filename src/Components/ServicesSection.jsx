@@ -1,4 +1,3 @@
-import React from "react";
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import planImage from "../Images/ChatGPT Image Plan.png";
 import writingImage from "../Images/ChatGPT Image Writing.png";

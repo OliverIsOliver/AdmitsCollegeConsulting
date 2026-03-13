@@ -1,5 +1,3 @@
-import React from "react"
-import { TypeAnimation } from 'react-type-animation';
 import chatgptHeroImage from "../Images/ChatGPT Image Feb 23, 2026, 12_19_13 PM.png";
 
 

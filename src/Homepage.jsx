@@ -5,10 +5,8 @@ import ServicesSection from './Components/ServicesSection'
 import FounderStorySection from './Components/FounderStorySection'
 import { PricingSection } from './Components/PricingSection'
 import ScheduleSection from './Components/ScheduleSection'
-import WavyLine from './Components/WavyLine'
 import Header from './Components/Header'
 import { Helmet } from 'react-helmet';
-import BlogHome from './Components/BlogHome'
 
 function Homepage() {
   useEffect(() => {
