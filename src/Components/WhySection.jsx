@@ -2,6 +2,12 @@ import { useEffect, useMemo, useState } from "react";
 import { IoChatboxEllipses } from "react-icons/io5";
 import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
 import headshotImage from "../Images/headshot1.jpeg";
+import dukeLogo from "../Images/schools/duke.svg";
+import harvardLogo from "../Images/schools/harvard.svg";
+import mitLogo from "../Images/schools/mit.svg";
+import yaleLogo from "../Images/schools/yale.svg";
+import northwesternLogo from "../Images/schools/northwestern.svg";
+import utAustinLogo from "../Images/schools/utaustin.svg";
 
 export default function WhySection() {
   const photoMix = useMemo(
@@ -181,7 +187,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="799"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/duke.38629773.svg"
+                      src={dukeLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -192,7 +198,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="1367"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/harvard.0651e71d.svg"
+                      src={harvardLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -203,7 +209,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="677"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/mit.02abd4ed.svg"
+                      src={mitLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -221,7 +227,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="228"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/yale.fed1fc4e.svg"
+                      src={yaleLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -232,7 +238,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="1186"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/northwestern.461d14a5.svg"
+                      src={northwesternLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -243,7 +249,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="1225"
                       height="350"
-                      src="https://maxadmit.com/_next/static/media/utaustin.465217dd.svg"
+                      src={utAustinLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />

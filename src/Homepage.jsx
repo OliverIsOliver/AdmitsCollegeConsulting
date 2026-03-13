@@ -15,9 +15,23 @@ function Homepage() {
     let navScrollLockUntil = 0
     let initialHashRetryTimers = []
     let initialHashProtectUntil = 0
+    let initialScrollUnlockTimer
+    const previousOverflow = document.body.style.overflow
+    const previousOverscrollBehavior = document.body.style.overscrollBehavior
 
     const lockHashUpdates = (durationMs = 900) => {
       navScrollLockUntil = Date.now() + durationMs
+    }
+
+    const preventScrollInput = (event) => {
+      event.preventDefault()
+    }
+
+    const preventScrollKeys = (event) => {
+      const blockedKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' ', 'Spacebar']
+      if (blockedKeys.includes(event.key)) {
+        event.preventDefault()
+      }
     }
 
     const scrollToHash = (hash) => {
@@ -70,8 +84,21 @@ function Homepage() {
 
     const initialHashId = initialHash.replace('#', '')
     if (sectionIds.includes(initialHashId)) {
-      initialHashProtectUntil = Date.now() + 2400
-      lockHashUpdates(2400)
+      initialHashProtectUntil = Date.now() + 1000
+      lockHashUpdates(1000)
+
+      document.body.style.overflow = 'hidden'
+      document.body.style.overscrollBehavior = 'none'
+      window.addEventListener('wheel', preventScrollInput, { passive: false })
+      window.addEventListener('touchmove', preventScrollInput, { passive: false })
+      window.addEventListener('keydown', preventScrollKeys)
+      initialScrollUnlockTimer = window.setTimeout(() => {
+        document.body.style.overflow = previousOverflow
+        document.body.style.overscrollBehavior = previousOverscrollBehavior
+        window.removeEventListener('wheel', preventScrollInput)
+        window.removeEventListener('touchmove', preventScrollInput)
+        window.removeEventListener('keydown', preventScrollKeys)
+      }, 1000)
 
       ;[0, 120, 260, 500, 850, 1300, 1900].forEach((delay) => {
         const timerId = window.setTimeout(() => {
@@ -88,6 +115,14 @@ function Homepage() {
     return () => {
       window.removeEventListener('nav-scroll-start', lockHashUpdates)
       initialHashRetryTimers.forEach((timerId) => window.clearTimeout(timerId))
+      if (initialScrollUnlockTimer) {
+        window.clearTimeout(initialScrollUnlockTimer)
+      }
+      document.body.style.overflow = previousOverflow
+      document.body.style.overscrollBehavior = previousOverscrollBehavior
+      window.removeEventListener('wheel', preventScrollInput)
+      window.removeEventListener('touchmove', preventScrollInput)
+      window.removeEventListener('keydown', preventScrollKeys)
       window.removeEventListener('scroll', updateHashOnScroll)
       window.removeEventListener('resize', updateHashOnScroll)
     }
