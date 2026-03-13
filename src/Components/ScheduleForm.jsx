@@ -52,17 +52,6 @@ function ScheduleForm() {
     };
   }, []);
 
-  /*
-  return (
-    <div className="w-full">
-      <div
-        id="cal-inline-schedule"
-        className="mx-auto flex h-[520px] w-full max-w-none items-center justify-center overflow-hidden rounded-2xl border border-[#d9e3ff] bg-white [&>*]:h-full [&>*]:w-full [&>*]:max-w-none [&_iframe]:h-full [&_iframe]:w-full [&_iframe]:max-w-none"
-      />
-    </div>
-  );
-  */
-
   return (
     <section className="w-full flex justify-center py-0">
       <div

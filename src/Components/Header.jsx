@@ -38,15 +38,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* <div className='font-outfit'>
-        <div className="py-2 bg-[#58371a] text-white text-center">
-          Looking for an affordable, stunning website? I run a web development agency and have worked with over 20 clients to create impactful websites. {' '}
-          <a href="https://thryvedesign.com" target='_blank' className='underline text-blue-100'>
-            Take me there.
-          </a>
-        </div>
-      </div> */}
-
       <div className="md:sticky z-40 top-10 mt-10 flex flex-col justify-center items-center mx-10 font-outfit">
 
         <header className="bg-white/40 max-w-[85rem] backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl w-full z-40">

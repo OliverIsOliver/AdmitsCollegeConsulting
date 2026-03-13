@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import HeroMain from './Components/HeroMain'
 import WhySection from './Components/WhySection'
 import ServicesSection from './Components/ServicesSection'
-import FounderStorySection from './Components/FounderStorySection'
 import { PricingSection } from './Components/PricingSection'
 import ScheduleSection from './Components/ScheduleSection'
 import Header from './Components/Header'
@@ -139,9 +138,6 @@ function Homepage() {
 
         <Header />
         <HeroMain />
-        <div className="hidden">
-          <FounderStorySection />
-        </div>
         <WhySection />
         <ServicesSection />
         <PricingSection />

@@ -26,54 +26,6 @@ function ScheduleSection() {
           <ScheduleForm />
         </div>
 
-        {/* <footer className="bg-[#efa237] mt-16 py-8 text-center">
-          <p className="text-[#553418] text-lg font-outfit px-2">
-            Built with ❤️ by <a href="mailto:pranavkonjeti@gmail.com" target="_blank" className="text-[#3c2611] underline">Pranav Konjeti</a> using <span className="text-[#3c2611]">React, TailwindCSS, Material Tailwind</span> <br />
-            This portfolio is a complete rehaul of my <a href="https://pranavkold.vercel.app" target="_blank" className="text-[#3c2611] underline">old one</a>. Have Suggestions? Email me!
-            
-
-          </p>
-
-          <div className="mt-4 flex justify-center gap-4">
-            <a
-              href="https://github.com/pkthecoda"
-              target="_blank"
-                className="p-3 bg-white rounded-full transition transform hover:scale-105"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="text-[#4a2f16] text-2xl" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/pranav-konjeti"
-              target="_blank"
-                className="p-3 bg-white rounded-full transition transform hover:scale-105"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="text-[#4a2f16] text-2xl" />
-            </a>
-            <a
-              className="p-3 bg-white rounded-full transition transform hover:scale-105"
-              href="mailto:pranavkonjeti@gmail.com"
-            >
-              <FaEnvelope className="text-[#4a2f16] text-2xl" />
-            </a>
-            <a
-              href="https://www.youtube.com/@pranavkonjeti"
-                className="p-3 bg-white rounded-full transition transform hover:scale-105"
-              target="_blank"
-            >
-              <FaYoutube className="text-[#4a2f16] text-2xl" />
-            </a>
-            <a
-              href="https://buymeacoffee.com/pranavkonjeti"
-                className="p-3 bg-white rounded-full transition transform hover:scale-105"
-              target="_blank"
-            >
-              <BiSolidCoffeeAlt className="text-[#4a2f16] text-2xl" />
-            </a>
-          </div>
-        </footer> */}
-
         <footer className="mt-10">
           <div className="bg-[#88A0E8] px-10 py-10">
             <div className="mx-auto flex max-w-7xl flex-col items-center font-outfit">

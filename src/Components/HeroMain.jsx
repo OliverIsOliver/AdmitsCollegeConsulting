@@ -36,23 +36,6 @@ export default function HeroMain() {
                 <p className="mt-6 text-xl sm:text-3xl leading-8 text-black font-outfit">
                   Learn from students who successfully navigated
                   <span className='hero-main-gradient font-semibold ml-2'>
-                {/* <TypeAnimation
-                        sequence={[
-                            'impactful software.', // Types 'One'
-                            2000, // Waits 1.5s
-                            'visually-appealing websites.', // Deletes 'One' and types 'Two'
-                            2000, // Waits 1.5s
-                            'tools to democratize education', // Deletes 'One' and types 'Two'
-                            2000, // Waits 1.5s
-                            () => {
-                            console.log('Sequence completed');
-                            },
-                        ]}
-                        wrapper="span"
-                        cursor={true}
-                        repeat={Infinity}
-                        style={{}}
-                    /> */}
                       competitive T20 admissions.
                   </span>
                 </p>
