@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   FaLinkedin,
   FaGithub,
@@ -11,9 +11,49 @@ import { BiSolidCoffeeAlt } from "react-icons/bi";
 import { IoChatboxEllipses } from "react-icons/io5";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
+import headshotImage from "../Images/headshot1.jpeg";
 import { IoMailOpen } from "react-icons/io5";
 
 export default function WhySection() {
+  const photoMix = useMemo(
+    () => [chatgptHeroImage, headshotImage].filter(Boolean),
+    []
+  );
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const goToNextPhoto = () => {
+    if (photoMix.length <= 1) return;
+    setActivePhotoIndex((current) => (current + 1) % photoMix.length);
+  };
+
+  useEffect(() => {
+    if (photoMix.length <= 1) return undefined;
+
+    const rotationTimer = window.setTimeout(() => {
+      setActivePhotoIndex((current) => (current + 1) % photoMix.length);
+    }, 12000);
+
+    return () => window.clearTimeout(rotationTimer);
+  }, [activePhotoIndex, photoMix.length]);
+
+  const getPhotoLayerClass = (index) => {
+    const total = photoMix.length;
+    const offset = (index - activePhotoIndex + total) % total;
+
+    if (offset === 0) {
+      return "z-30 opacity-100 translate-x-0 translate-y-0 rotate-0 scale-100";
+    }
+
+    if (offset === 1) {
+      return "z-20 opacity-90 translate-x-4 translate-y-2 rotate-[8deg] scale-95";
+    }
+
+    if (offset === total - 1) {
+      return "z-10 opacity-90 -translate-x-12 translate-y-2 -rotate-[8deg] scale-95";
+    }
+
+    return "z-0 opacity-0 scale-90";
+  };
+
   return (
     <>
       <div
@@ -72,11 +112,42 @@ export default function WhySection() {
               </div>
             </div>
             <div class="w-full lg:w-1/2 lg:order-2 order-1 flex items-center justify-center lg:justify-end">
-              <img
-                loading="lazy"
-                class="rounded-xl w-5/6 lg:my-0 shadow-2xl ring-1 ring-black ring-opacity-5 rotate-2"
-                src={chatgptHeroImage}
-              />
+              <div className="relative h-[20rem] w-5/6 max-w-[34rem] sm:h-[24rem] lg:h-[28rem]">
+                {photoMix.map((photo, index) => {
+                  const total = photoMix.length;
+                  const offset = (index - activePhotoIndex + total) % total;
+                  const isFront = offset === 0;
+
+                  return (
+                  <div
+                    key={`${photo}-${index}`}
+                    onClick={isFront ? goToNextPhoto : undefined}
+                    className={`absolute inset-0 rounded-2xl shadow-2xl transition-all duration-700 ease-out ${
+                      isFront ? "cursor-pointer" : ""
+                    } ${getPhotoLayerClass(index)}`}
+                  >
+                    <img
+                      loading="lazy"
+                      src={photo}
+                      alt="Why us profile"
+                      className="h-full w-full rounded-2xl object-cover"
+                    />
+                  </div>
+                  );
+                })}
+
+                <div
+                  className="pointer-events-none absolute left-[-1.5rem] top-[-1.75rem] z-40 flex h-16 w-[18rem] -rotate-[2deg] items-center justify-center bg-[linear-gradient(90deg,#281e71_0%,#305cde_55%,#122859_100%)] px-6 text-xl font-semibold tracking-wide text-white shadow-[0_16px_35px_rgba(18,40,89,0.28)] sm:w-[20rem] sm:text-2xl"
+                  style={{
+                    clipPath:
+                      "polygon(0% 0%,100% 0%,88% 50%,100% 100%,0% 100%)",
+                  }}
+                >
+                  <span className="w-full pl-[2%] pr-[11%] text-center">
+                    Meet Our Mentors
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
