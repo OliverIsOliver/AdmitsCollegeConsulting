@@ -15,6 +15,7 @@ export default function Navbar() {
 
   const handleNavigationClick = (event, href) => {
     event.preventDefault();
+    window.dispatchEvent(new CustomEvent('nav-scroll-start'));
 
     if (href === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
