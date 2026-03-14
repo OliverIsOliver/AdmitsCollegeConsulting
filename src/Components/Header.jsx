@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 import admitsLogo from '../Images/admitslogo.png'
 
 const navigation = [
@@ -13,9 +12,8 @@ const navigation = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const handleNavigationClick = (event, href) => {
-    event.preventDefault();
-    window.dispatchEvent(new CustomEvent('nav-scroll-start'));
+  const navigateToSection = (href) => {
+    const isMobile = window.innerWidth < 1024;
 
     if (href === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -24,24 +22,76 @@ export default function Navbar() {
         '',
         `${window.location.pathname}${window.location.search}`
       );
-      setMobileMenuOpen(false);
       return;
     }
 
     const target = document.querySelector(href);
-    if (target) {
+    if (!target) return;
+
+    if (!isMobile) {
       target.scrollIntoView({ behavior: 'smooth' });
       window.history.replaceState(null, '', href);
+      return;
     }
-    setMobileMenuOpen(false); 
+
+    const mobileOffsetByHref = {
+      '#why': -108,
+      '#services': -108,
+      '#pricing': -108,
+      '#schedule': -108,
+    };
+    const extraOffset = isMobile ? (mobileOffsetByHref[href] ?? 0) : 0;
+    const scrollToDestination = () => {
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const destination = Math.min(Math.max(targetTop + extraOffset, 0), maxScroll);
+      window.scrollTo({ top: destination, behavior: 'smooth' });
+    };
+
+    scrollToDestination();
+
+    // Re-apply once on mobile to account for nav close/layout settling.
+    if (isMobile) {
+      window.setTimeout(scrollToDestination, 140);
+    }
+  };
+
+  const handleNavigationClick = (event, href) => {
+    event.preventDefault();
+    window.dispatchEvent(new CustomEvent('nav-scroll-start'));
+
+    const shouldDelayScrollForMobileClose = window.innerWidth < 1024 && mobileMenuOpen;
+
+    if (shouldDelayScrollForMobileClose) {
+      setMobileMenuOpen(false);
+      window.setTimeout(() => {
+        navigateToSection(href);
+      }, 60);
+      return;
+    }
+
+    navigateToSection(href);
+    setMobileMenuOpen(false);
   };
 
   return (
     <>
-      <div className="md:sticky z-40 top-10 mt-10 flex flex-col justify-center items-center mx-10 font-outfit">
-
-        <header className="bg-white/40 max-w-[85rem] backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl w-full z-40">
-          <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      {mobileMenuOpen && <div className="fixed inset-0 z-40 bg-white lg:hidden" aria-hidden="true" />}
+      <div
+        className={`flex flex-col items-center font-outfit ${
+          mobileMenuOpen
+            ? 'fixed inset-x-10 top-10 bottom-0 z-50 justify-start'
+            : 'sticky z-40 top-10 mt-10 mx-10 justify-center'
+        } lg:sticky lg:z-40 lg:top-10 lg:mt-10 lg:mx-10 lg:justify-center`}
+      >
+        <header
+          className={`relative z-40 w-full overflow-hidden ${
+            mobileMenuOpen
+              ? 'h-full max-w-none rounded-none bg-white'
+              : 'h-[5.5rem] max-w-[85rem] rounded-2xl bg-white/40 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]'
+          } lg:h-auto`}
+        >
+          <nav className="relative z-10 flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
               <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
@@ -56,9 +106,11 @@ export default function Navbar() {
               <button
                 type="button"
                 className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(true)}
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-nav-menu"
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">{mobileMenuOpen ? 'Close main menu' : 'Open main menu'}</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
@@ -84,59 +136,37 @@ export default function Navbar() {
               </a>
             </div>
           </nav>
-
-          {/* Mobile Dialog */}
-          <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <div className="fixed inset-0 z-40" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
-                <a href="/" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src={admitsLogo}
-                    alt=""
-                  />
-                </a>
-                <button
-                  type="button"
-                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                  onClick={() => setMobileMenuOpen(false)}
+          <div
+            id="mobile-nav-menu"
+            className={`relative z-10 h-[calc(100%-5.5rem)] transition-opacity duration-500 ease-out lg:hidden ${
+              mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+          >
+            <div className="flex h-[calc(100%-5.5rem)] flex-col px-6 pb-8 pt-4">
+              <div className="space-y-2">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-1.5 block rounded-lg px-1.5 py-2 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={(event) => handleNavigationClick(event, item.href)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="-mx-1.5 mt-auto pt-6">
+                <a
+                  href="#schedule"
+                  className="block rounded-lg bg-[#353ab9] px-3 py-2.5 text-center text-[1.05rem] leading-7 text-white shadow-md"
+                  onClick={(event) => handleNavigationClick(event, '#schedule')}
                 >
-                  <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                  Book a Free Call
+                </a>
               </div>
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
-                        onClick={(event) => handleNavigationClick(event, item.href)}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                  <div className="py-6">
-                    <a
-                      href="#schedule"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-[1.05rem] leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={(event) => handleNavigationClick(event, '#schedule')}
-                    >
-                      Book a Free Call
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Dialog.Panel>
-          </Dialog>
-
+            </div>
+          </div>
         </header>
-
       </div>
     </>
   )

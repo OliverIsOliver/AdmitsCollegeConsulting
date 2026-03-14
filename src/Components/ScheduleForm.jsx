@@ -38,7 +38,7 @@ function ScheduleForm() {
     window.Cal("init", "schedule", { origin: "https://app.cal.com" });
     window.Cal.ns.schedule("inline", {
       elementOrSelector: "#cal-inline-schedule",
-      calLink: "olivermaher/30min",
+      calLink: "admitscollegeconsulting/30min",
       config: { layout: "month_view" },
     });
     window.Cal.ns.schedule("ui", {
