@@ -131,9 +131,12 @@ function Homepage() {
     <div>
         <Helmet>
           <html lang='en'></html>
-          <title>Pranav Konjeti - Web Developer & Freelancer</title>
+          <title>Admits College Consulting</title>
           <meta charSet='utf-8'/>
-          <meta name="description" content="I'm Pranav, a 16-year-old web developer & freelancer with 3M+ website views & $4K+ in funding. Explore my portfolio for my work and experience."/>
+          <meta
+            name="description"
+            content="Admits College Consulting provides personalized admissions strategy, essay support, and application guidance from recent admits."
+          />
         </Helmet>
 
         <Header />

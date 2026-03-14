@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import pranavtextlogo from '../Images/pranavlogotext.png'
+import admitsLogo from '../Images/admitslogo.png'
 
 const navigation = [
   { name: 'Home', href: '#hero' },
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <span className="sr-only">Your Company</span>
                 <img
                     className="h-8 w-auto"
-                    src={pranavtextlogo}
+                    src={admitsLogo}
                     alt=""
                   />
               </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
-                    src={pranavtextlogo}
+                    src={admitsLogo}
                     alt=""
                   />
                 </a>

@@ -1,4 +1,4 @@
-import chatgptHeroImage from "../Images/ChatGPT Image Feb 23, 2026, 12_19_13 PM.png";
+import chatgptHeroImage from "../Images/hero-graphic.png";
 
 
 export default function HeroMain() {

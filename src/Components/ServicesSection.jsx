@@ -1,6 +1,6 @@
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
-import planImage from "../Images/ChatGPT Image Plan.png";
-import writingImage from "../Images/ChatGPT Image Writing.png";
+import planImage from "../Images/planning-graphic.png";
+import writingImage from "../Images/writing-graphic.png";
 
 const serviceCards = [
   {

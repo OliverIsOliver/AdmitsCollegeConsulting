@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { IoChatboxEllipses } from "react-icons/io5";
-import chatgptHeroImage from "../Images/ChatGPT Image Feb 25, 2026, 09_08_13 PM.png";
-import headshotImage from "../Images/headshot1.jpeg";
+import chatgptHeroImage from "../Images/oliverm.png";
+import headshotImage from "../Images/tylerh.png";
 import dukeLogo from "../Images/schools/duke.svg";
-import harvardLogo from "../Images/schools/harvard.svg";
+import princetonLogo from "../Images/schools/princeton.svg";
 import mitLogo from "../Images/schools/mit.svg";
-import yaleLogo from "../Images/schools/yale.svg";
-import northwesternLogo from "../Images/schools/northwestern.svg";
+import stanfordLogo from "../Images/schools/stanford.svg";
+import oxfordLogo from "../Images/schools/oxford.svg";
 import utAustinLogo from "../Images/schools/utaustin.svg";
 
 export default function WhySection() {
@@ -198,7 +198,7 @@ export default function WhySection() {
                       loading="lazy"
                       width="1367"
                       height="350"
-                      src={harvardLogo}
+                      src={princetonLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
@@ -227,18 +227,18 @@ export default function WhySection() {
                       loading="lazy"
                       width="228"
                       height="350"
-                      src={yaleLogo}
+                      src={stanfordLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
                   </li>
                   <li className="flex">
                     <img
-                      alt="Northwestern"
+                      alt="Oxford"
                       loading="lazy"
                       width="1186"
                       height="350"
-                      src={northwesternLogo}
+                      src={oxfordLogo}
                       className="h-9 w-auto object-contain sm:h-11 lg:h-14"
                       style={{ color: "transparent" }}
                     />
