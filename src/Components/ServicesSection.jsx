@@ -1,4 +1,5 @@
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
+import PropTypes from "prop-types";
 import planImage from "../Images/planning-graphic.png";
 import writingImage from "../Images/writing-graphic.png";
 
@@ -68,6 +69,14 @@ function ServiceCard({ title, summary, icon: Icon, bullets, image }) {
     </div>
   );
 }
+
+ServiceCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  icon: PropTypes.elementType.isRequired,
+  bullets: PropTypes.arrayOf(PropTypes.string).isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default function ServicesSection() {
   return (

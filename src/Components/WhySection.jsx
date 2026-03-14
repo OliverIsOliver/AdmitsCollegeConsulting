@@ -64,21 +64,21 @@ export default function WhySection() {
   return (
     <>
       <div
-        class="relative overflow-hidden bg-[#98AEEF] -skew-y-2 px-4 xl:px-0 pt-16 space-y-24 font-outfit"
+        className="relative overflow-hidden bg-[#98AEEF] -skew-y-2 px-4 xl:px-0 pt-16 space-y-24 font-outfit"
         id="why"
       >
-        <div class="relative skew-y-2">
-          <div class="lg:mx-auto lg:max-w-7xl flex flex-col lg:flex-row lg:gap-12 lg:px-8">
-            <div class="w-full lg:w-1/2 lg:my-0 my-12 mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:order-1 order-2">
+        <div className="relative skew-y-2">
+          <div className="lg:mx-auto lg:max-w-7xl flex flex-col lg:flex-row lg:gap-12 lg:px-8">
+            <div className="w-full lg:w-1/2 lg:my-0 my-12 mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:order-1 order-2">
               <div className="pl-0">
                 <div>
-                  <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white">
                     <IoChatboxEllipses className="h-8 w-8 text-[#122859]" />
                   </span>
                 </div>
 
-                <div class="mt-3">
-                  <h2 class="text-4xl mb-1 font-semibold tracking-wide text-white">
+                <div className="mt-3">
+                  <h2 className="text-4xl mb-1 font-semibold tracking-wide text-white">
                     Why Learn From{" "}
                     <span className="text-[#1f1d70] font-bold">Recent Admits?</span>
                   </h2>
@@ -118,7 +118,7 @@ export default function WhySection() {
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/2 lg:order-2 order-1 flex items-center justify-center lg:justify-end">
+            <div className="w-full lg:w-1/2 lg:order-2 order-1 flex items-center justify-center lg:justify-end">
               <div className="relative h-[20rem] w-5/6 max-w-[34rem] sm:h-[24rem] lg:h-[28rem]">
                 {photoMix.map((photo, index) => {
                   const total = photoMix.length;
