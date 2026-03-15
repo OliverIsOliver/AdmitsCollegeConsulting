@@ -20,7 +20,7 @@ function ScheduleSection() {
             Book a Free Call
           </h2>
           <p className="text-lg text-[#122859] px-2 max-w-xl text-center">
-            Schedule a free 30-minute intro call and let’s discuss your goals and how we can build a strong application together.
+            Schedule a free 30-minute call to discuss your goals, current profile, and how we can strengthen your application to top universities.
           </p>
 
           <ScheduleForm />
