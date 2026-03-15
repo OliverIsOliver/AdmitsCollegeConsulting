@@ -25,7 +25,7 @@ export default function HeroMain() {
         <>
         <div id="hero" className="relative isolate px-6 pt-14 lg:px-8">
           <div
-            className="hidden sm:block absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            className="hidden lg:block absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl lg:-top-80"
             aria-hidden="true"
           >
             <div
@@ -44,8 +44,8 @@ export default function HeroMain() {
                   <span className='hero-main-gradient'>Recent Admits.</span>
                 </h1>
                 <p className="mt-6 text-xl sm:text-3xl leading-8 text-black font-outfit">
-                  Learn from students who successfully navigated
-                  <span className='hero-main-gradient font-semibold ml-2'>
+                  Learn from students who successfully navigated{" "}
+                  <span className='hero-main-gradient font-semibold'>
                       competitive T20 admissions.
                   </span>
                 </p>
@@ -53,7 +53,7 @@ export default function HeroMain() {
                 <div className="mt-10 flex items-center justify-start gap-x-6">
                   <a
                     href="#why"
-                    className="rounded-md bg-[#5d4dcf] px-3.5 py-2.5 text-xl text-white shadow-lg shadow-[#281e71]/20 sm:shadow-xl sm:shadow-[#281e71]/35 font-outfit w-40 h-15 flex items-center justify-center transform transition hover:scale-105"
+                    className="rounded-md bg-[#5d4dcf] px-3.5 py-2.5 text-xl text-white shadow-lg shadow-[#281e71]/20 lg:shadow-xl lg:shadow-[#281e71]/35 font-outfit w-40 h-15 flex items-center justify-center transform transition hover:scale-105"
                     onClick={(event) => handleNavigationClick(event, "#why")}
                   >
                     Why Us
@@ -63,7 +63,7 @@ export default function HeroMain() {
                     className="text-xl leading-6 text-black font-outfit transform transition hover:scale-105"
                     onClick={(event) => handleNavigationClick(event, "#schedule")}
                   >
-                    Book a Free Call <span aria-hidden="true">→</span>
+                    Book a Free Call <span className="hidden sm:inline" aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>

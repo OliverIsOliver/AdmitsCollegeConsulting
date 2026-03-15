@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import admitsLogo from '../Images/admitslogo.png'
 
@@ -11,6 +11,24 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverscroll = document.body.style.overscrollBehavior;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'none';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overscrollBehavior = previousBodyOverscroll;
+    };
+  }, [mobileMenuOpen]);
 
   const navigateToSection = (href) => {
     const isMobile = window.innerWidth < 1024;
@@ -76,11 +94,16 @@ export default function Navbar() {
 
   return (
     <>
-      {mobileMenuOpen && <div className="fixed inset-0 z-40 bg-white lg:hidden" aria-hidden="true" />}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-x-0 top-0 z-40 h-screen [height:100lvh] bg-white lg:hidden"
+          aria-hidden="true"
+        />
+      )}
       <div
         className={`flex flex-col items-center font-outfit ${
           mobileMenuOpen
-            ? 'fixed inset-x-10 top-10 bottom-0 z-50 justify-start'
+            ? 'fixed inset-x-10 top-10 z-50 h-[calc(100vh-2.5rem)] [height:calc(100lvh-2.5rem)] justify-start'
             : 'sticky z-40 top-10 mt-10 mx-10 justify-center'
         } lg:sticky lg:z-40 lg:top-10 lg:mt-10 lg:mx-10 lg:justify-center`}
       >
