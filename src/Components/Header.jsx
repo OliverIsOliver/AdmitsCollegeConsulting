@@ -94,23 +94,17 @@ export default function Navbar() {
 
   return (
     <>
-      {mobileMenuOpen && (
-        <div
-          className="fixed inset-x-0 top-0 z-40 h-screen [height:100lvh] bg-white lg:hidden"
-          aria-hidden="true"
-        />
-      )}
       <div
         className={`flex flex-col items-center font-outfit ${
           mobileMenuOpen
-            ? 'fixed inset-x-10 top-10 z-50 h-[calc(100vh-2.5rem)] [height:calc(100lvh-2.5rem)] justify-start'
+            ? 'fixed inset-0 z-50 justify-start bg-white'
             : 'sticky z-40 top-10 mt-10 mx-10 justify-center'
         } lg:sticky lg:z-40 lg:top-10 lg:mt-10 lg:mx-10 lg:justify-center`}
       >
         <header
           className={`relative z-40 w-full overflow-hidden ${
             mobileMenuOpen
-              ? 'h-full max-w-none rounded-none bg-white'
+              ? 'h-full max-w-none rounded-none bg-white px-10 pt-10'
               : 'h-[5.5rem] max-w-[85rem] rounded-2xl bg-white/40 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]'
           } lg:h-auto`}
         >
